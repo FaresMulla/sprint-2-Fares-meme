@@ -1,0 +1,35 @@
+.main-content{
+    width: 95vw;
+    margin: auto;
+    /* background-color: blanchedalmond; */
+    
+}
+
+.main-canvas{
+    width: 520px;
+    border: 1px solid black;
+}
+
+.display-none{
+    display: none;
+}
+
+.img-item{
+    width: 100%;
+    height: 100%;    
+}
+
+.img-container{
+    margin-top: 2vh;
+}
+
+
+.btns-controler{
+    padding: 1vh;
+    display: flex;
+    justify-content: center;
+}
+
+.btns-controler > button{
+    margin: 0.2vw;
+}
