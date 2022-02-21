@@ -66,6 +66,7 @@ function nextText() {
     } else {
         arrPlace++
     }
+    document.querySelector('input[name=text-on-canvas]').value = memes.lines[arrPlace].txt
 
 }
 
