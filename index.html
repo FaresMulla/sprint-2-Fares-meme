@@ -139,7 +139,7 @@
                             </div>
                             <div class="btns-controler col-12">
                                 <button title="back to gallery" class="btn btn-outline-danger col-3"
-                                    onclick="backToGallery()">Gallery</button>
+                                    data-bs-target="#exampleModal" data-bs-toggle="modal">Gallery</button>
                                 <button title="share by facebook" class="btn btn-outline-info col-3"
                                     onclick="onShareImg()">share</button>
                                 <!-- <button class="btn btn-outline-dark col-3" onclick="backToGallery()">Save to my memes</button> -->
@@ -149,7 +149,33 @@
 
                                 <p class="user-msg" hidden></p>
                             </div>
+
+
+
                         </div>
+                        <!-- MODAL ARE YOU SURE -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Are you sure?</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        All your changes will be lost!!
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                            onclick="backToGallery()">Yes, back to gallery</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
