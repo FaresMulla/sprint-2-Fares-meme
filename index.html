@@ -68,45 +68,46 @@
                             </div>
 
                             <div class="btns-controler col-12">
-                                <button type="button" class="btn btn-outline-secondary col-3" onclick="nextText()"><img
-                                        src="icons/arrow-down-up.svg" alt=""></button>
-                                <button type="button" class="btn btn-outline-secondary col-4" onclick="addNewLine()"><img
-                                        src="icons/plus-circle.svg" alt=""></button>
-                                <button type="button" class="btn btn-outline-secondary col-4" onclick="removeLine()"><img
-                                        src="icons/trash.svg" alt=""></button>
+                                <button title="choose next line" type="button" class="btn btn-outline-secondary col-3"
+                                    onclick="nextText()"><img src="icons/arrow-down-up.svg" alt=""></button>
+                                <button title="add new line" type="button" class="btn btn-outline-secondary col-4"
+                                    onclick="addNewLine()"><img src="icons/plus-circle.svg" alt=""></button>
+                                <button title="remove this line" type="button" class="btn btn-outline-secondary col-4"
+                                    onclick="removeLine()"><img src="icons/trash.svg" alt=""></button>
                             </div>
 
                             <div class="btns-controler col-12">
-                                <button class="btn btn-outline-secondary col-2" onclick="fontEnlargement()"><img
-                                        src="icons/fonts.svg" alt="">+</button>
-                                <button class="btn btn-outline-secondary col-3" onclick="fontReduction()"><img
-                                        src="icons/fonts.svg" alt="">-</button>
-                                <button class="btn btn-outline-secondary col-3" onclick="strokeEnlargement()"><img
-                                        src="icons/border-width.svg" alt="">+</button>
-                                <button class="btn btn-outline-secondary col-3" onclick="strokeReduction()"><img
-                                        src="icons/border-width.svg" alt="">-</button>
+                                <button title="bigger font size" class="btn btn-outline-secondary col-2"
+                                    onclick="fontEnlargement()"><img src="icons/fonts.svg" alt="">+</button>
+                                <button title="smaller font size" class="btn btn-outline-secondary col-3"
+                                    onclick="fontReduction()"><img src="icons/fonts.svg" alt="">-</button>
+                                <button title="bigger stroke size" class="btn btn-outline-secondary col-3"
+                                    onclick="strokeEnlargement()"><img src="icons/border-width.svg" alt="">+</button>
+                                <button title="smaller stroke size" class="btn btn-outline-secondary col-3"
+                                    onclick="strokeReduction()"><img src="icons/border-width.svg" alt="">-</button>
                             </div>
 
                             <div class="btns-controler col-12">
-                                <button class="btn btn-outline-secondary col-3" onclick="textAlignLeft('left')"><img
-                                        src="icons/text-left.svg" alt=""></button>
-                                <button class="btn btn-outline-secondary col-4" onclick="textAlignCenter('center')"><img
-                                        src="icons/text-center.svg" alt=""></button>
-                                <button class="btn btn-outline-secondary col-4" onclick="textAlignRight('right')"><img
-                                        src="icons/text-right.svg" alt=""></button>
+                                <button title="text align left" class="btn btn-outline-secondary col-3"
+                                    onclick="textAlignLeft('left')"><img src="icons/text-left.svg" alt=""></button>
+                                <button title="text align center" class="btn btn-outline-secondary col-4"
+                                    onclick="textAlignCenter('center')"><img src="icons/text-center.svg"
+                                        alt=""></button>
+                                <button title="text align right" class="btn btn-outline-secondary col-4"
+                                    onclick="textAlignRight('right')"><img src="icons/text-right.svg" alt=""></button>
                             </div>
 
 
                             <div class="btns-controler col-12">
-                                <button class="btn btn-outline-secondary col-6" onclick="moveTextUp()"><img
-                                        src="icons/arrow-down.svg" alt=""></button>
-                                <button class="btn btn-outline-secondary col-5" onclick="moveTextDown()"><img
-                                        src="icons/arrow-up.svg" alt=""></button>
+                                <button title="move line down" class="btn btn-outline-secondary col-6"
+                                    onclick="moveTextUp()"><img src="icons/arrow-down.svg" alt=""></button>
+                                <button title="move line up" class="btn btn-outline-secondary col-5"
+                                    onclick="moveTextDown()"><img src="icons/arrow-up.svg" alt=""></button>
                             </div>
 
                             <div class="btns-controler col-12">
-                                <select class="form-select col-8" aria-label="Default select example" name="font-family"
-                                    id="" onchange="setFontFamily(this.value)">
+                                <select class="form-select col-5" aria-label="Default select example" name="font-family"
+                                    id="" style="width: 48%;" onchange="setFontFamily(this.value)">
                                     <option value="Arial">choose font</option>
                                     <option value="Arial">Arial</option>
                                     <option value="Berlin Sans FB">Berlin Sans FB</option>
@@ -114,22 +115,40 @@
                                     <option value="Calibri">Calibri</option>
                                     <option value="David">David</option>
                                 </select>
+                                <select style="width: 48%;" class="form-select col-5"
+                                    aria-label="Default select example" name="stickers" id=""
+                                    onchange="addSticker(this.value, event)">
+                                    <option value="">choose sticker</option>
+                                    <option value="❤">❤</option>
+                                    <option value="✔">✔</option>
+                                    <option value="😁">😁</option>
+                                    <option value="🤗">🤗</option>
+                                    <option value="😪">😪</option>
+                                </select>
                             </div>
+
+
 
                             <div class="btns-controler col-12">
-                                <button class="btn btn-outline-light col-5"><img src="icons/paint-bucket.svg" alt=""><input
-                                        type="color" oninput="textColor(this.value)"></button>
-                                <button class="btn btn-outline-light col-6"><img src="icons/palette.svg" alt=""><input
-                                        type="color" oninput="strokeColor(this.value)"></button>
+                                <button title="choose color text" class="btn btn-outline-light col-5"><img
+                                        src="icons/paint-bucket.svg" alt=""><input type="color"
+                                        oninput="textColor(this.value)"></button>
+                                <button title="choose color stroke" class="btn btn-outline-light col-6"><img
+                                        src="icons/palette.svg" alt=""><input type="color"
+                                        oninput="strokeColor(this.value)"></button>
                             </div>
+                            <div class="btns-controler col-12">
+                                <button title="back to gallery" class="btn btn-outline-danger col-3"
+                                    onclick="backToGallery()">Gallery</button>
+                                <button title="share by facebook" class="btn btn-outline-info col-3"
+                                    onclick="onShareImg()">share</button>
+                                <!-- <button class="btn btn-outline-dark col-3" onclick="backToGallery()">Save to my memes</button> -->
+                                <button title="download to your computer" class="btn btn-outline-light col-3"><a
+                                        class=" btn btn-light text-decoration-none" href=""
+                                        onclick="downloadCanvas(this)">download</a></button>
 
-                            <button class="btn btn-outline-danger col-3" onclick="backToGallery()">Gallery</button>
-                            <button class="btn btn-outline-info col-3" onclick="onShareImg()">share</button>
-                            <button class="btn btn-outline-dark col-3" onclick="backToGallery()">Save to my memes</button>
-                            <button class="btn btn-outline-light col-3"><a class=" btn btn-light text-decoration-none" href=""
-                                    onclick="downloadCanvas(this)">download</a></button>
-
-                            <p class="user-msg" hidden></p>
+                                <p class="user-msg" hidden></p>
+                            </div>
                         </div>
                     </div>
                 </div>

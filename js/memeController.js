@@ -22,6 +22,12 @@ function changeText(ev) {
     drawTextOnCanvas()
 }
 
+function addSticker(val, ev){
+    document.querySelector('input[name=text-on-canvas]').value = val
+    changeText(ev)
+
+}
+
 function drawImg(val) {
     currImg = val
     var elImg = document.querySelector('.' + val)
