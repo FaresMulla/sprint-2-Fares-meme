@@ -53,6 +53,9 @@ function showMemeEditor(val = 'value') {
 }
 
 function backToGallery() {
+
+  document.querySelector('input[name=text-on-canvas]').value = ''
+  
   var elGallery = document.querySelector('.main-page')
   elGallery.classList.remove('display-none')
 
